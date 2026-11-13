@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#a51f32">
+<title>PMR SPENSA SEBA</title>
+<style>
+:root{--red:#a51f32;--red2:#7f1727;--pink:#fff0f1;--ink:#24232a;--muted:#777782;--bg:#f7f7fa;--line:#ececf1;--white:#fff;--green:#168451}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,sans-serif;background:var(--bg);color:var(--ink)}button,input,textarea,select{font:inherit}button{cursor:pointer;border:0}.top{background:linear-gradient(135deg,var(--red2),var(--red));color:white;padding:16px 18px 28px}.topbar{display:flex;align-items:center;justify-content:space-between;max-width:980px;margin:auto}.brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.2px}.logo{width:42px;height:42px;border-radius:13px;background:#fff;color:var(--red);display:grid;place-items:center;font-size:23px}.small{font-size:12px;opacity:.82;font-weight:500}.top h1{font-size:27px;line-height:1.15;margin:28px 0 8px}.top p{margin:0;max-width:560px;color:#ffe5e8;font-size:14px}.top-actions{display:flex;gap:8px}.btn{padding:10px 14px;border-radius:11px;font-weight:700;font-size:13px}.btn-light{background:white;color:var(--red)}.btn-red{background:var(--red);color:white}.btn-outline{background:white;border:1px solid var(--line);color:var(--ink)}.btn-soft{background:var(--pink);color:var(--red)}.wrap{max-width:980px;margin:-15px auto 40px;padding:0 14px;position:relative}.nav{display:flex;gap:5px;overflow:auto;background:white;padding:7px;border-radius:15px;box-shadow:0 5px 22px #24101a0d}.nav button{white-space:nowrap;padding:10px 12px;border-radius:10px;background:transparent;color:#62616a;font-size:13px;font-weight:700}.nav button.active{background:var(--pink);color:var(--red)}main{padding-top:18px}.hero-card{background:white;border:1px solid var(--line);border-radius:18px;padding:20px;display:flex;align-items:center;justify-content:space-between;gap:14px}.hero-card h2{margin:0 0 6px;font-size:20px}.hero-card p{margin:0;color:var(--muted);font-size:13px;line-height:1.5}.hero-icon{font-size:48px;background:var(--pink);border-radius:18px;width:78px;height:78px;display:grid;place-items:center;flex-shrink:0}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:13px}.tile,.card{background:white;border:1px solid var(--line);border-radius:16px;padding:16px}.tile .ico{font-size:24px}.tile h3{font-size:15px;margin:8px 0 4px}.tile p,.muted{font-size:12px;color:var(--muted);margin:0;line-height:1.5}.section-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:20px 2px 10px}.section-head h2{font-size:18px;margin:0}.card{margin-bottom:11px}.card h3{margin:0 0 5px;font-size:16px}.meta{font-size:11px;color:var(--muted);margin-bottom:10px}.tag{display:inline-block;padding:5px 8px;border-radius:20px;background:#eef8f2;color:var(--green);font-size:10px;font-weight:800}.tag.draft{background:#fff4df;color:#98610b}.row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.field{display:block;width:100%;border:1px solid #dedee6;border-radius:11px;padding:11px 12px;background:white;margin:6px 0 12px;outline:none}.field:focus{border-color:var(--red);box-shadow:0 0 0 3px #a51f3212}label{font-size:12px;font-weight:700}.formbox{background:white;border:1px solid var(--line);border-radius:16px;padding:16px;margin-bottom:12px}.formbox h3{margin:0 0 12px}.notice{background:#fff8e9;color:#77530e;padding:11px 12px;border-radius:11px;font-size:12px;line-height:1.5;margin:10px 0}.empty{text-align:center;padding:30px 15px;color:var(--muted);background:white;border:1px dashed #d9d9e1;border-radius:15px}.empty b{display:block;color:var(--ink);margin:8px}.comment{border-top:1px solid var(--line);padding-top:10px;margin-top:10px;font-size:13px}.comment strong{font-size:12px}.ad{margin-top:14px;padding:15px;border:1px dashed #d5c5c8;background:#fffafa;border-radius:14px;text-align:center;color:#8c6870;font-size:12px}.hidden{display:none!important}.footer{text-align:center;color:#9897a0;font-size:11px;padding:22px 0}.pill{font-size:11px;color:var(--red);background:var(--pink);padding:5px 8px;border-radius:20px;font-weight:700}.toast{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);background:#25232a;color:white;padding:11px 16px;border-radius:12px;font-size:13px;box-shadow:0 8px 30px #0002;z-index:20;max-width:90%;text-align:center}.facts{padding-left:18px;margin:8px 0}.facts li{margin:8px 0;font-size:13px;line-height:1.5}
+@media(min-width:700px){.top{padding:22px 30px 38px}.top h1{font-size:36px}.wrap{padding:0 22px}.grid{grid-template-columns:repeat(4,minmax(0,1fr))}.hero-card{padding:26px}}
+</style>
+</head>
+<body>
+<header class="top">
+ <div class="topbar">
+  <div class="brand"><div class="logo">♥</div><div>PMR SPENSA SEBA<div class="small">Peduli • Relawan • Kemanusiaan</div></div></div>
+  <div class="top-actions"><button class="btn btn-light" id="accountBtn" onclick="accountAction()">Masuk</button></div>
+ </div>
+ <h1>Bergerak Bersama,<br>Peduli Sesama.</h1>
+ <p>Pusat informasi, kegiatan, dan ruang kolaborasi Palang Merah Remaja SPENSA SEBA.</p>
+</header>
+<div class="wrap">
+ <nav class="nav" id="nav">
+  <button class="active" data-page="home">🏠 Beranda</button>
+  <button data-page="proker">📋 Proker</button>
+  <button data-page="facts">❤️ Fakta PMR</button>
+  <button data-page="community">💬 Komunitas</button>
+  <button data-page="admin" id="adminNav" class="hidden">⚙️ Admin</button>
+ </nav>
+ <main>
+  <section id="home" class="page">
+   <div class="hero-card"><div><span class="pill">SELAMAT DATANG</span><h2>Halo, Relawan Muda! 👋</h2><p>Kenali organisasi kami, ikuti kabar kegiatan, dan temukan semangat kemanusiaan bersama PMR SPENSA SEBA.</p><div class="row" style="margin-top:13px"><button class="btn btn-red" onclick="go('proker')">Lihat Proker</button><button class="btn btn-outline" onclick="go('facts')">Pelajari PMR</button></div></div><div class="hero-icon">🩹</div></div>
+   <div class="grid">
+    <div class="tile"><div class="ico">📋</div><h3>Program Kerja</h3><p>Ruang anggota untuk merancang dan menerbitkan Proker.</p></div>
+    <div class="tile"><div class="ico">👥</div><h3>Komunitas</h3><p>Berbagi komentar dan membangun kebersamaan.</p></div>
+    <div class="tile"><div class="ico">📚</div><h3>Fakta PMR</h3><p>Kenali kepalangmerahan dan nilai kemanusiaan.</p></div>
+    <div class="tile"><div class="ico">📸</div><h3>Dokumentasi</h3><p>Arsip cerita dan kegiatan organisasi.</p></div>
+   </div>
+   <div class="section-head"><h2>Proker terbaru</h2><button class="btn btn-soft" onclick="go('proker')">Lihat semua</button></div>
+   <div id="homeProkers"></div>
+   <div class="ad">📢 AREA IKLAN<br><span class="small" style="color:#8c6870">Ruang iklan — monetisasi dapat ditambahkan setelah website online dan memenuhi ketentuan penyedia iklan.</span></div>
+  </section>
+  <section id="proker" class="page hidden">
+   <div class="section-head"><h2>📋 Program Kerja</h2><span class="pill" id="prokerRole">Publik</span></div>
+   <p class="muted" style="margin:0 2px 12px">Semua orang dapat melihat Proker yang sudah dipublikasikan. Pembuatan dan draft hanya tersedia bagi anggota PMR.</p>
+   <div id="memberComposer" class="formbox hidden">
+    <h3>✍️ Tulis Proker</h3>
+    <label>Judul Proker</label><input class="field" id="pTitle" placeholder="Contoh: Latihan rutin PMR">
+    <label>Divisi / Penanggung jawab</label><input class="field" id="pDivision" placeholder="Contoh: Divisi Pelatihan">
+    <label>Tanggal kegiatan</label><input class="field" id="pDate" type="date">
+    <label>Deskripsi</label><textarea class="field" id="pDesc" rows="4" placeholder="Jelaskan tujuan dan rencana kegiatan..."></textarea>
+    <div class="row"><button class="btn btn-outline" onclick="saveProker('draft')">Simpan Draft</button><button class="btn btn-red" onclick="saveProker('published')">Posting Sekarang 🚀</button></div>
+    <div class="notice">Draft hanya terlihat oleh anggota yang membuatnya dalam prototipe ini. Proker yang diposting akan tampil di halaman publik.</div>
+   </div>
+   <div id="draftArea"></div><div id="publishedArea"></div>
+  </section>
+  <section id="facts" class="page hidden">
+   <div class="section-head"><h2>❤️ Fakta PMR</h2><span class="pill">Edukasi</span></div>
+   <div class="card"><h3>Apa itu PMR?</h3><p class="muted">Palang Merah Remaja (PMR) adalah wadah kegiatan remaja di sekolah atau kelompok untuk mengembangkan karakter kepalangmerahan dan keterampilan kemanusiaan.</p></div>
+   <div class="card"><h3>Tri Bakti PMR</h3><ol class="facts"><li>Meningkatkan keterampilan hidup sehat.</li><li>Berkarya dan berbakti di masyarakat.</li><li>Mempererat persahabatan nasional dan internasional.</li></ol></div>
+   <div class="card"><h3>7 Prinsip Dasar Gerakan Palang Merah dan Bulan Sabit Merah</h3><ol class="facts"><li>Kemanusiaan</li><li>Kesamaan</li><li>Kenetralan</li><li>Kemandirian</li><li>Kesukarelaan</li><li>Kesatuan</li><li>Kesemestaan</li></ol></div>
+   <div class="notice">Materi edukasi ini adalah pengantar. Untuk pedoman resmi kegiatan dan pertolongan pertama, ikuti pembina serta PMI.</div>
+  </section>
+  <section id="community" class="page hidden">
+   <div class="section-head"><h2>💬 Komunitas</h2><span class="pill">Diskusi</span></div>
+   <div class="formbox"><h3>Tulis komentar</h3><textarea class="field" id="commentText" rows="3" placeholder="Bagikan pesan yang sopan..."></textarea><button class="btn btn-red" onclick="addComment()">Kirim Komentar</button><p class="muted" style="margin-top:9px">Prototipe: komentar tersimpan di perangkat ini. Jangan tulis data pribadi.</p></div>
+   <div id="commentsArea"></div>
+  </section>
+  <section id="admin" class="page hidden">
+   <div class="section-head"><h2>⚙️ Panel Admin</h2><span class="pill">Demo</span></div>
+   <div class="notice">Panel ini hanya simulasi tampilan. Hak admin sungguhan wajib diverifikasi di server, bukan hanya berdasarkan data browser.</div>
+   <div class="card"><h3>Pengelolaan website</h3><p class="muted">Kelola isi Proker melalui fitur edit/hapus di daftar Proker. Pengaturan akun dan verifikasi anggota akan dibuat pada versi backend.</p></div>
+   <button class="btn btn-outline" onclick="resetDemo()">Reset seluruh data demo</button>
+  </section>
+ </main>
+ <div class="footer">© 2026 PMR SPENSA SEBA • Website prototipe</div>
+</div>
+<div id="modal" class="hidden" style="position:fixed;inset:0;background:#17131bb8;z-index:10;display:grid;place-items:center;padding:16px">
+ <div class="formbox" style="width:min(100%,420px);max-height:90vh;overflow:auto">
+  <div class="row" style="justify-content:space-between"><h3 id="modalTitle">Masuk akun</h3><button class="btn btn-outline" onclick="closeModal()">✕</button></div>
+  <div id="loginFields">
+   <label>Nama pengguna</label><input class="field" id="username" placeholder="Nama pengguna">
+   <label>Kata sandi</label><input class="field" id="password" type="password" placeholder="Kata sandi">
+   <label>Jenis akun (demo)</label><select class="field" id="role"><option value="visitor">Pengunjung</option><option value="member">Anggota PMR (demo)</option><option value="admin">Administrator (demo)</option></select>
+   <div class="notice">Mode demo: akun hanya tersimpan di browser ini. Pilihan peran anggota/admin tidak aman untuk penggunaan nyata dan nanti akan diganti verifikasi server.</div>
+   <button class="btn btn-red" style="width:100%" onclick="login()">Masuk / Buat akun demo</button>
+  </div>
+ </div>
+</div>
+<div id="toast" class="toast hidden"></div>
+<script>
+const $=id=>document.getElementById(id);
+const get=(k,d)=>{try{return JSON.parse(localStorage.getItem(k))??d}catch{return d}};
+const set=(k,v)=>localStorage.setItem(k,JSON.stringify(v));
+let user=get('pmr_user',null);
+let prokers=get('pmr_prokers',[
+{id:1,title:'Latihan Rutin Kepalangmerahan',division:'Divisi Pelatihan',date:'2026-11-15',desc:'Kegiatan latihan rutin untuk meningkatkan pengetahuan dan keterampilan anggota PMR.',status:'published',owner:'Admin PMR'},
+{id:2,title:'Aksi Peduli Lingkungan Sekolah',division:'Divisi Bakti Masyarakat',date:'2026-11-22',desc:'Rencana kegiatan menjaga kebersihan dan kepedulian terhadap lingkungan sekolah.',status:'published',owner:'Admin PMR'}
+]);
+let comments=get('pmr_comments',[]);
+function toast(t){$('toast').textContent=t;$('toast').classList.remove('hidden');setTimeout(()=>$('toast').classList.add('hidden'),2300)}
+function go(page){document.querySelectorAll('.page').forEach(x=>x.classList.add('hidden'));$(page).classList.remove('hidden');document.querySelectorAll('.nav button').forEach(b=>b.classList.toggle('active',b.dataset.page===page));render();window.scrollTo({top:0,behavior:'smooth'})}
+document.querySelectorAll('.nav button[data-page]').forEach(b=>b.addEventListener('click',()=>go(b.dataset.page)));
+function accountAction(){if(user){if(confirm('Keluar dari akun demo?')){user=null;localStorage.removeItem('pmr_user');updateUser();render()}}else openModal()}
+function openModal(){$('modal').classList.remove('hidden')}
+function closeModal(){$('modal').classList.add('hidden')}
+function login(){let name=$('username').value.trim(),pass=$('password').value,role=$('role').value;if(!name||!pass){toast('Isi nama pengguna dan kata sandi.');return}user={name,role};set('pmr_user',user);closeModal();updateUser();render();toast('Berhasil masuk ke akun demo!')}
+function updateUser(){$('accountBtn').textContent=user?user.name+' · Keluar':'Masuk';$('adminNav').classList.toggle('hidden',!user||user.role!=='admin')}
+function saveProker(status){if(!user||user.role==='visitor'){toast('Fitur Proker hanya untuk anggota PMR.');return}let title=$('pTitle').value.trim(),desc=$('pDesc').value.trim();if(!title||!desc){toast('Judul dan deskripsi wajib diisi.');return}let p={id:Date.now(),title,division:$('pDivision').value.trim()||'Anggota PMR',date:$('pDate').value,desc,status,owner:user.name};prokers.unshift(p);set('pmr_prokers',prokers);['pTitle','pDivision','pDate','pDesc'].forEach(x=>$(x).value='');render();toast(status==='draft'?'Proker disimpan sebagai draft.':'Proker berhasil diposting!')}
+function deleteProker(id){let p=prokers.find(x=>x.id===id);if(!p)return;if(!(user&&(user.role==='admin'||p.owner===user.name))){toast('Tidak punya izin menghapus.');return}if(confirm('Hapus Proker ini?')){prokers=prokers.filter(x=>x.id!==id);set('pmr_prokers',prokers);render()}}
+function editProker(id){let p=prokers.find(x=>x.id===id);if(!p||!(user&&(user.role==='admin'||p.owner===user.name))){toast('Tidak punya izin mengedit.');return}let t=prompt('Ubah judul Proker:',p.title);if(t===null)return;let d=prompt('Ubah deskripsi:',p.desc);if(d===null)return;p.title=t.trim()||p.title;p.desc=d.trim()||p.desc;set('pmr_prokers',prokers);render();toast('Proker diperbarui.')}
+function publishProker(id){let p=prokers.find(x=>x.id===id);if(!p||!(user&&(user.role==='admin'||p.owner===user.name))){toast('Tidak punya izin.');return}p.status='published';set('pmr_prokers',prokers);render();toast('Draft berhasil dipublikasikan!')}
+function prokerCard(p){let can=user&&(user.role==='admin'||p.owner===user.name);return `<div class="card"><div class="row" style="justify-content:space-between"><span class="tag ${p.status==='draft'?'draft':''}">${p.status==='draft'?'DRAFT':'DIPUBLIKASIKAN'}</span><span class="meta">${esc(p.date||'Tanggal belum ditentukan')}</span></div><h3>${esc(p.title)}</h3><div class="meta">${esc(p.division)} · Oleh ${esc(p.owner)}</div><p class="muted">${esc(p.desc)}</p>${can?`<div class="row" style="margin-top:12px"><button class="btn btn-outline" onclick="editProker(${p.id})">Edit</button>${p.status==='draft'?`<button class="btn btn-soft" onclick="publishProker(${p.id})">Posting</button>`:''}<button class="btn btn-outline" onclick="deleteProker(${p.id})">Hapus</button></div>`:''}</div>`}
+function renderProkers(){let member=!!user&&['member','admin'].includes(user.role);$('memberComposer').classList.toggle('hidden',!member);$('prokerRole').textContent=member?'Anggota aktif':'Publik';let drafts=member?prokers.filter(p=>p.status==='draft'&&(user.role==='admin'||p.owner===user.name)):[];let published=prokers.filter(p=>p.status==='published');$('draftArea').innerHTML=drafts.length?`<div class="section-head"><h2>📝 Draft saya</h2></div>${drafts.map(prokerCard).join('')}`:'';$('publishedArea').innerHTML=`<div class="section-head"><h2>🌐 Proker dipublikasikan</h2></div>${published.length?published.map(prokerCard).join(''):'<div class="empty">Belum ada Proker yang dipublikasikan.</div>'}`}
+function addComment(){if(!user){toast('Masuk akun terlebih dahulu untuk berkomentar.');openModal();return}let t=$('commentText').value.trim();if(!t){toast('Tulis komentar terlebih dahulu.');return}comments.unshift({name:user.name,text:t,date:new Date().toLocaleString('id-ID')});set('pmr_comments',comments);$('commentText').value='';renderComments();toast('Komentar ditambahkan.')}
+function renderComments(){$('commentsArea').innerHTML=comments.length?comments.map(c=>`<div class="card"><strong>${esc(c.name)}</strong><div class="meta">${esc(c.date)}</div><div style="font-size:13px">${esc(c.text)}</div></div>`).join(''):'<div class="empty">Belum ada komentar. Jadilah yang pertama berdiskusi! 💬</div>'}
+function render(){renderProkers();renderComments();$('homeProkers').innerHTML=prokers.filter(p=>p.status==='published').slice(0,2).map(prokerCard).join('')||'<div class="empty">Belum ada Proker.</div>'}
+function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function resetDemo(){if(confirm('Hapus semua data demo dan kembali ke data awal?')){localStorage.clear();location.reload()}}
+updateUser();render();
+</script>
+</body>
+</html>
